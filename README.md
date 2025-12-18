@@ -74,7 +74,7 @@ Allowlist overrides the blocklist if both match.
 
 ---
 
-🧠 Detection logic (high level)
+## 🧠 Detection logic (high level)
 Input can be:
 
 full URL (https://bad.site/path)
@@ -103,7 +103,7 @@ Blocklist
 
 ---
 
-🧪 Usage (Node / tooling)
+## 🧪 Usage (Node / tooling)
 ```
 ts
 
@@ -131,7 +131,7 @@ wallet / dApp integrations
 
 ---
 
-🧩 Intended consumers
+## 🧩 Intended consumers
 🦊 Wallets (Petra, others)
 
 🧩 Browser security extensions
@@ -140,7 +140,7 @@ wallet / dApp integrations
 
 🛡️ Security tooling & research
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome, but quality matters more than quantity.
 
 Adding a domain to the blocklist requires:
@@ -156,14 +156,14 @@ Please read CONTRIBUTING.md before submitting a PR.
 
 ---
 
-🔒 Security
+## 🔒 Security
 If you discover a sensitive issue or coordinated phishing campaign,
 please report it privately.
 See SECURITY.md for contact details.
 
 ---
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 This project provides best-effort threat intelligence.
 
 Presence in the blocklist does not guarantee malicious intent forever
@@ -172,7 +172,7 @@ Absence from the blocklist does not guarantee safety
 
 Always apply defense-in-depth.
 
-🧭 Roadmap
+## 🧭 Roadmap
  Issue templates for phishing reports
 
  Chrome extension (MV3) consuming this list
