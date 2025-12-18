@@ -32,7 +32,7 @@ It is designed to be **consumed by wallets, browser extensions, and dApps**.
 ---
 
 ## 🧱 Repository structure
-
+```
 aptos-phishing-detect/
 ├─ data/
 │ ├─ blocklist.json # Known malicious domains
@@ -49,7 +49,7 @@ aptos-phishing-detect/
 │
 └─ .github/workflows/
 └─ ci.yml
-
+```
 
 ---
 
@@ -68,8 +68,11 @@ aptos-phishing-detect/
     }
   }
 }
+```
 allowlist.json
 Allowlist overrides the blocklist if both match.
+
+---
 
 🧠 Detection logic (high level)
 Input can be:
@@ -98,9 +101,12 @@ Allowlist
 
 Blocklist
 
+---
+
 🧪 Usage (Node / tooling)
+```
 ts
-Copiar código
+
 import { check, isBlocked } from "aptos-phishing-detect";
 
 check("https://sub.example.com");
@@ -112,7 +118,7 @@ check("https://sub.example.com");
   reason: "test"
 }
 */
-
+```
 This library is intended for:
 
 build-time checks
@@ -122,6 +128,8 @@ backend tooling
 security extensions
 
 wallet / dApp integrations
+
+---
 
 🧩 Intended consumers
 🦊 Wallets (Petra, others)
@@ -146,10 +154,14 @@ No speculation or low-confidence entries
 
 Please read CONTRIBUTING.md before submitting a PR.
 
+---
+
 🔒 Security
 If you discover a sensitive issue or coordinated phishing campaign,
 please report it privately.
 See SECURITY.md for contact details.
+
+---
 
 ⚠️ Disclaimer
 This project provides best-effort threat intelligence.
