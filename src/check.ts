@@ -1,23 +1,11 @@
 import type { DomainListFile, Verdict } from "./types.js";
 import { getDomainCandidates, normalizeHostname } from "./normalize.js";
 
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import blocklistData from "../data/blocklist.json" with { type: "json" };
+import allowlistData from "../data/allowlist.json" with { type: "json" };
 
-// Resolve __dirname in ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function loadJson<T>(relativePath: string): T {
-  const fullPath = path.join(__dirname, "..", relativePath);
-  const raw = fs.readFileSync(fullPath, "utf8");
-  return JSON.parse(raw) as T;
-}
-
-// Load lists
-const BL = loadJson<DomainListFile>("data/blocklist.json");
-const AL = loadJson<DomainListFile>("data/allowlist.json");
+const BL = blocklistData as DomainListFile;
+const AL = allowlistData as DomainListFile;
 
 function findMatch(
   domains: Record<string, any>,
